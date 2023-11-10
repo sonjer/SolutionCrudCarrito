@@ -39,6 +39,54 @@ namespace PracticaCrud.AplicacionWeb.Controllers
             return StatusCode(StatusCodes.Status200OK, listArticulos);
         }
 
+        [HttpPost]
+        [Route("api/insertArticulo")]
+        public async Task<IActionResult> InsertarArticulo([FromBody] VMArticulo articulo)
+        {
+
+            Artículo nuevoArticulo = new Artículo();
+            {
+                nuevoArticulo.Descripcion = articulo.Descripcion;
+                nuevoArticulo.Precio = articulo.Precio;
+                nuevoArticulo.Imagen = articulo.Imagen;
+                nuevoArticulo.Stock = articulo.Stock;
+
+            };
+
+            bool respuesta = await _ArticuloService.Insert(nuevoArticulo);
+
+            return StatusCode(StatusCodes.Status200OK, new {valor = respuesta});
+        }
+
+        [HttpPut]
+        [Route("api/updateArticulo")]
+        public async Task<IActionResult> updateArticulo([FromBody] VMArticulo articulo)
+        {
+
+            Artículo articuloActualizar = new Artículo();
+            {
+                articuloActualizar.Codigo = articulo.Codigo;
+                articuloActualizar.Descripcion = articulo.Descripcion;
+                articuloActualizar.Precio = articulo.Precio;
+                articuloActualizar.Imagen = articulo.Imagen;
+                articuloActualizar.Stock = articulo.Stock;
+
+            };
+
+            bool respuesta = await _ArticuloService.Update(articuloActualizar);
+
+            return StatusCode(StatusCodes.Status200OK, new { valor = respuesta });
+        }
+
+        [HttpPost]
+        [Route("api/deleteArticulo")]
+        public async Task<IActionResult> deleteArticulo([FromBody] int id)
+        {
+            bool respuesta = await _ArticuloService.Delete(id);
+
+            return StatusCode(StatusCodes.Status200OK, new { valor = respuesta });
+        }
+
         public IActionResult Privacy()
         {
             return View();
