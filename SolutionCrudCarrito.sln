@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaCrud.Models", "PracticaCrud.Models\PracticaCrud.Models.csproj", "{44DF5450-598D-4DAB-8AD8-1CC1597DC70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticaCrud.Models", "PracticaCrud.Models\PracticaCrud.Models.csproj", "{44DF5450-598D-4DAB-8AD8-1CC1597DC70F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaCrud.DAL", "PracticaCrud.DAL\PracticaCrud.DAL.csproj", "{13603627-9631-4BFE-A3F7-5D26E16CC7F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticaCrud.DAL", "PracticaCrud.DAL\PracticaCrud.DAL.csproj", "{13603627-9631-4BFE-A3F7-5D26E16CC7F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaCrud.BLL", "PracticaCrud.BLL\PracticaCrud.BLL.csproj", "{B1265D6E-3B88-44E5-9CA7-45C2D0BC358E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticaCrud.BLL", "PracticaCrud.BLL\PracticaCrud.BLL.csproj", "{B1265D6E-3B88-44E5-9CA7-45C2D0BC358E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaCrud.AplicacionWeb", "PracticaCrud.AplicacionWeb\PracticaCrud.AplicacionWeb.csproj", "{BE0033FF-AD5B-4C2D-B596-A3EC899BAF87}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaCrudAngular", "PracticaCrudAngular\PracticaCrudAngular.csproj", "{0C1CD8E8-4B93-432E-B32F-28127978E9D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticaCrud.AplicacionWeb", "PracticaCrud.AplicacionWeb\PracticaCrud.AplicacionWeb.csproj", "{BE0033FF-AD5B-4C2D-B596-A3EC899BAF87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{BE0033FF-AD5B-4C2D-B596-A3EC899BAF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE0033FF-AD5B-4C2D-B596-A3EC899BAF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE0033FF-AD5B-4C2D-B596-A3EC899BAF87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C1CD8E8-4B93-432E-B32F-28127978E9D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C1CD8E8-4B93-432E-B32F-28127978E9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C1CD8E8-4B93-432E-B32F-28127978E9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C1CD8E8-4B93-432E-B32F-28127978E9D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
