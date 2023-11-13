@@ -10,6 +10,7 @@ public partial class ClienteArticulo
     public int? ClienteId { get; set; }
 
     public int? ArticuloId { get; set; }
+    public int? CantidadArticulos { get; set; }
 
     public DateTime? Fecha { get; set; }
 

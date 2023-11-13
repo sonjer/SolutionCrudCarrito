@@ -10,10 +10,13 @@ namespace PracticaCrud.AplicacionWeb.Controllers
     public class HomeController : Controller
     {
         private readonly IArticuloService _ArticuloService;
+        private readonly IClienteArticulosService _ClienteArticulosService;
 
-        public HomeController(IArticuloService articuloService)
+
+        public HomeController(IArticuloService articuloService, IClienteArticulosService clienteArticulosService)
         {
             _ArticuloService = articuloService;
+            _ClienteArticulosService = clienteArticulosService;
 
         }
 
@@ -38,6 +41,26 @@ namespace PracticaCrud.AplicacionWeb.Controllers
             }).ToList();
             return StatusCode(StatusCodes.Status200OK, listArticulos);
         }
+
+        [HttpGet]
+        [Route("api/ListaClientesArticulos")]
+        public async Task<IActionResult> ListaClientesArticulos()
+        {
+            IQueryable<ClienteArticulo> queryArticuloSQL = await _ClienteArticulosService.GetAll();
+
+            List<ClienteArticulo> listClienteArticulos = queryArticuloSQL.Select(c => new ClienteArticulo()
+            {
+               Id = c.Id,
+               ClienteId = c.ClienteId,
+               ArticuloId = c.ArticuloId,
+               CantidadArticulos = c.CantidadArticulos,
+               Fecha = c.Fecha,
+               Articulo = c.Articulo,
+               Cliente = c.Cliente
+            }).ToList();
+            return StatusCode(StatusCodes.Status200OK, listClienteArticulos);
+        }
+
 
         [HttpPost]
         [Route("api/insertArticulo")]

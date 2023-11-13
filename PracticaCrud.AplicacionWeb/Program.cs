@@ -18,6 +18,8 @@ builder.Services.AddScoped<IGenericRepository<Artículo>, ArticuloRepository>();
 builder.Services.AddScoped<IArticuloService, ArticuloService>();
 builder.Services.AddScoped<IGenericRepository<Cliente>, ClienteRepository>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IGenericRepository<ClienteArticulo>, ClienteArticuloRepository>();
+builder.Services.AddScoped<IClienteArticulosService, ClienteArticuloService>();
 
 var app = builder.Build();
 
